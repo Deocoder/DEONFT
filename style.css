@@ -16,14 +16,12 @@
 }
 
 body {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  background-color: var(--background);
+  background: #0f0d29;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
 nav {
   justify-content: space-between;
   display: flex;
@@ -34,6 +32,10 @@ nav {
   color: #000;
   padding-left: 40px;
   padding-right: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  inset: 1000;
 }
 
 .nav-links {
@@ -252,4 +254,108 @@ border-radius: 50%;
     color: var(--text);
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
+}
+
+/*  */
+.wrapper {
+  /* max-width: 1200px; */
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+}
+
+ .carousel {
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.top{
+  padding: 40px;
+}
+
+.join{
+  padding: 40px 20px;
+  background: radial-gradient( var(--primary-color) , var(--background));
+  text-align: center;
+  color: #fff;
+}
+
+.footer {
+  background: var(--primary-color);
+  color: var(--text);
+  font-size: 14px;
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.footer ul li {
+  padding: 5px;
+  list-style: none;
+}
+
+.footer a{
+  color: var(--text);
+  transition: 0.3s linear;
+}
+
+.footer a:hover{
+  color: var(--background);
+}
+
+.footer p {
+  color: #d3d0d0;
+  line-height: 24px;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-col-1,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 25%;
+}
+
+.footer-col-2 {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-col-2 img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.footer hr {
+  border: none;
+  background-color: #b5b5b5;
+  margin: 20px 0;
+  height: 1px;
 }
