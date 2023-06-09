@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
   text-decoration: none;
+  list-style: none;
 }
 
 :root {
@@ -69,6 +70,7 @@ nav {
 
 .bars i {
   color: var(--text);
+  cursor: pointer;
 }
 
 .bars {
