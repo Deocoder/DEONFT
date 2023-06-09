@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFT - PAGE</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://kit.fontawesome.com/092f6040db.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 <body>
       <nav>
+         <div class="bars">
+          <li>
+            <i class="fa fa-align-right fa-2x" onclick="openNav()"></i>
+          </li>
+        </div>
         <div class="nav-links">
-          <a href=""><li>Home</li></a>
-          <a href=""><li>About</li></a>
-          <a href=""><li>Artwork</li></a>
-          <a href=""><li>Collection</li></a>
-          <a href=""><li>Artist</li></a>
+          <a href="index.html"><li>Home</li></a>
+          <a href="#join"><li>About</li></a>
+          <a href="#"><li>Artwork</li></a>
+          <a href="#collection"><li>Collection</li></a>
+          <a href="#Artist"><li>Artist</li></a>
         </div>
         <div class="logo">
           <h1><img src="img/nft-logo-6202DDD5FF-seeklogo.com.png" alt=""></h1>
@@ -24,6 +31,22 @@
           <a href="" class=""><li>Login</li></a>
         </div>
       </nav>
+
+      <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+          <a href="#join">About</a>
+          <a href="">Artwork</a>
+          <a href="#collection">Collection</a>
+          <a href="#Artist">Artist</a>
+        </div>
+      </div>
 
       <section class="intro">
         <div class="row">
@@ -68,7 +91,7 @@
     </section>
       </section>
 
-      <section class="auction">
+      <section class="auction" id="collection">
         <h1>Live <span>auction</span></h1>
 
         <div class="nft-con">
@@ -364,7 +387,7 @@
     </section>
     <br>
     <br>
-    <section class="top">
+    <section class="top" id="Artist">
         <h1>TOP <span>creators</span></h1>
         <br>
         <div class="carousel">
@@ -449,7 +472,7 @@
             </div>
     </section>
 
-    <section class="join">
+    <section class="join" id="join">
         <h1>join our <span>community</span></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est corrupti rem maxime id repellat inventore quod, velit ab quas quis, laboriosam commodi officia libero recusandae ipsam ipsa culpa, quia quos?</p>
         <br>

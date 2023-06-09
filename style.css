@@ -17,6 +17,7 @@
 
 body {
   background: #0f0d29;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -66,6 +67,65 @@ nav {
   height: 100%;
 }
 
+.bars i {
+  color: var(--text);
+}
+
+.bars {
+  position: relative;
+  display: none;
+}
+
+/* Mobile navigation */
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 0%;
+  width: 100%;
+  z-index: 9;
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: var(--primary-color);
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: var(--header);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+}
+
 .intro {
   padding: 40px;
 }
@@ -74,6 +134,7 @@ pre {
   color: #fff;
   letter-spacing: 1px;
   font-size: 70px;
+  text-transform: uppercase;
 }
 
 span {
@@ -281,7 +342,6 @@ border-radius: 50%;
 
 .join{
   padding: 40px 20px;
-  background: radial-gradient( var(--primary-color) , var(--background));
   text-align: center;
   color: #fff;
 }

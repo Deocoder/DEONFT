@@ -25,3 +25,21 @@ const countdown = () => {
 
 setInterval(countdown , 1000)
 
+
+// Navbar
+function openNav() {
+  document.getElementById("myNav").style.height = "100%"
+  console.log(document.getElementById("myNav"))
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%"
+}
+
+// loader
+var loader = document.getElementById("preloader")
+
+window.addEventListener("load", function () {
+  loader.style.display = "none"
+})
